@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/wro.css"/>
+</head>
+<body>
+<#if showErrorLogin??>
+	<div class="alert alert-danger">
+		There was a problem logging in. Please try again.
+	</div>
+</#if>
+	<div class="container">
+		<form role="form" action="login" method="post">
+		  <div class="form-group">
+		    <label for="username">Username:</label>
+		    <input type="text" class="form-control" id="username" name="username"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="password">Password:</label>
+		    <input type="password" class="form-control" id="password" name="password"/>
+		  </div>
+		  <input type="hidden" id="csrf_token" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+		  <#if showCaptcha??>
+				<div class="form-group">
+					<div id="captchadiv">
+						<img id="image_captcha" src="images/jcaptcha" />  <input
+							name="captchacode" class="form-control" type="text" value="">
+
+					</div>
+				</div>
+			</#if>
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	<script src="js/wro.js" type="text/javascript"></script>
+</body>
+</html>
