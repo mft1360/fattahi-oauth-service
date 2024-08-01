@@ -20,7 +20,7 @@
 	<properties>
 		<wro4j.version>1.8.0</wro4j.version>
 		<java.version>1.8</java.version>
-		<bootstrap.version>3.3.7-1</bootstrap.version>
+		<bootstrap.version>5.0.0</bootstrap.version>
 		<jquery.version>2.2.4</jquery.version>
 	</properties>
 
